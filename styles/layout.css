@@ -21,7 +21,7 @@
 .layout{
   height: 100vh;
   display: grid;
-  grid-template-columns: 20vw auto;
+  grid-template-columns: 18vw auto;
   grid-template-rows: 20vh auto;
 }
 .sidebar{  
@@ -138,4 +138,109 @@ input{
   justify-content: center;
   font-size: 1rem;
   font-weight: 700;  
+}
+
+.topbar>.navbar__topbar{
+  display: grid;
+  grid-template-columns: auto 40%;
+}
+.navbar__topbar>.bienvenida{
+  padding-left: 7%;
+  display: flex;
+  align-items: center;
+  column-gap: 16px;    
+}
+.navbar__topbar>.opciones{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 32px;
+}
+.navbar__topbar button{
+  height: 32px;
+  padding: 0 32px;
+  background-color: #004e8d;
+  font-weight: 700;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+button:hover{
+  transform: translateY(-2px);
+  box-shadow: 0px 1px 5px hsla(0, 0%, 0%, 30%);
+}
+
+main{
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 80% auto;
+  grid-template-rows: 48px auto;
+  background-color: rgb(248, 248, 248);
+  column-gap: 32px;
+}
+main .cartas{    
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-rows: repeat(3, 1fr);
+  gap: 32px;
+}
+.cartas>.carta{
+  padding: 32px;
+  background-color: white;
+  border-left: 4px solid #004e8d;
+  box-shadow: 0px 1px 5px hsla(0, 0%, 0%, 30%);
+  display: grid;
+  grid-template-rows: 90% 10%;
+}
+.iconos__carta{
+  justify-self: end;
+}
+.iconos__carta>.icono{
+  width: 20px;
+  height: 20px;
+}
+
+.anuncios, .tendencias{    
+  padding: 16px;
+  background-color: white;
+  border-left: 4px solid #004e8d;
+  box-shadow: 0px 1px 5px hsla(0, 0%, 0%, 30%);  
+}
+.anuncios>.contenido__anuncios{
+  width: 100%;
+  height: 20%;
+}
+.right-cards p{
+  width: 100%;
+  height: 100%;
+  font-size: .75rem;  
+  overflow: hidden;
+  text-overflow: ellipsis;  
+}
+.contenido__anuncios{
+  margin-bottom: 16px;
+}
+.contenido__anuncios:last-of-type{
+  margin-bottom: 0;
+}
+.right-cards h3{
+  font-size: .80rem;
+}
+.tendencias{
+  margin-top: 32px;
+}
+.tendencias>.tendencia{
+  cursor: pointer;
+  padding: 8px;  
+}
+.tendencias>.tendencia:last-of-type{
+  margin-bottom: 0;
+}
+.tendencia:hover{
+  background-color: hsla(0, 0%, 90%, 0.5);
 }
